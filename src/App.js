@@ -5,12 +5,14 @@ import Car from './Car'
 //For Import the Routing part
 import { BrowserRouter as Router, Route,Link } from 'react-router-dom';
 import About from './About'
+import AjaxCall from './AjaxCall'
 
 class Home extends Component {
     render(){
         return (<h1>
             <Link to={`/cars`} >Car</Link><br/>
-            <Link to={`/about`} >About</Link>
+            <Link to={`/about`} >About</Link><br/>
+            <Link to={`/ajx`} >Ajax call(axios)</Link>
         </h1>);
     }
 }
@@ -34,6 +36,7 @@ class App extends Component {
               <Route path="/" component={Home}/>
               <Route path="/cars" component={Car}/>
               <Route path="/about" component={About}/>
+                  <Route path="/ajx" component={AjaxCall}/>
               </div>
           </Router>
       </div>
